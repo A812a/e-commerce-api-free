@@ -1,0 +1,17 @@
+
+
+
+<nav>
+  <div class="container">
+    <div class="contain">
+      <a routerLink="/products"><h3 class="logo">Market</h3></a>
+      <ul>
+        <li routerLink="/products" *ngIf="isLoggin">Products</li>
+        <li routerLink="/cart" *ngIf="isLoggin">Cart</li>
+        <li routerLink="/login" *ngIf="!isLoggin">Login</li>
+        <li routerLink="/register" *ngIf="!isLoggin">Register</li>
+        <li routerLink="" *ngIf="isLoggin" (click)="logout()">logout</li>
+      </ul>
+    </div>
+  </div>
+</nav>
